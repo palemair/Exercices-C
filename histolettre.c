@@ -16,45 +16,31 @@ main ()
       return EXIT_FAILURE; 
     }
 
-
-  puts("histogramme des lettres entrées.");
-  char **ptr = NULL;
-  char **copy = NULL;
+  puts("Entrez une phrase et un histogramme du nombre de lettres s'affichera");
   
+  char *copy = NULL;
   char *line =NULL;
   size_t n = 0;
   ssize_t read;
-  size_t i = 0;
   char * pt = NULL;
 
   while ((read = getline(&line, &n,stdin)) != -1)
           {
-            ptr = reallocarray(ptr, i+2 ,sizeof(*ptr));
-            pt = line;
-            if(*pt =='\n') break;
-            
-            while(*pt != '\n') pt++;
-            *pt = '\0';
-            ptr[i] = strdupa(line);       
-                    if (ptr == NULL)
+            copy = strdup(line);
+
+            if (copy == NULL) 
             { 
                 perror("reallocarray");
-                free(ptr);
+                free(copy);
             }
-            i++;
           }
-  ptr[i] = NULL; 
   free(line);
-  
-  copy = ptr;
   
   int tab[26];
   memset(tab,0,sizeof(tab));
   int c = 0;
 
-  while(*copy)
-  {
-   pt = *copy;
+   pt = copy;
    while(*pt)
    {
      c = *pt;
@@ -62,8 +48,6 @@ main ()
      if( c >= 0 && c <= 25 ) tab[c] +=1;  
      pt++;
    }
-  copy++;
-  }
 
   int max = tab[0];
 
@@ -72,18 +56,24 @@ main ()
       max = (max<=tab[u]) ? tab[u] : max;
   }
   
+  printf("%c",'\n');
+
   for(int f = max; f>0; f--) 
   {
+    printf("%2d |",f);
+
     for(int u = 0; u<26; u++) 
     {
         tab[u]<f ? printf("   ") : printf(" X ");
     }
     putchar('\n');
   }
+
+    printf("%s","    ");
     for(int u = 0; u<26; u++) printf(" %c ", 'a' + u); 
     putchar('\n');
   
-  free(ptr);
+  free(copy);
   
   return (EXIT_SUCCESS);
 }
