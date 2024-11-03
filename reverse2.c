@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 
+/* fonction recursive qui inverse une phrase , exercice proposé dans le K&R */
 int reverse(const char *str)
 {
     if(*str == '\0')

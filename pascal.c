@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+/* Affichage du triangle de pascal */
 void afft(int nbt, int tab[][nbt]);
 
 void afft(int nbt, int tab[][nbt])
@@ -14,7 +15,6 @@ void afft(int nbt, int tab[][nbt])
           else printf("%4d ",tab[u][y]);
       putchar('\n');
   }
-
 }
 
 int main(int argc, char **argv) {
@@ -22,11 +22,10 @@ int main(int argc, char **argv) {
     char *nbl; 
     int nb;
 
-
     if (argc ==2) 
     {
         nbl = strdupa(argv[1]);
-        if(sscanf(nbl,"%d",&nb); 
+        sscanf(nbl,"%d",&nb); 
     }
     else
     {
@@ -36,7 +35,6 @@ int main(int argc, char **argv) {
   int tab[nb][nb];
   memset(tab,0,sizeof(tab));
   
-  
   for(int u = 0; u<nb; u++)
   {
       tab[u][0] =  1;
@@ -44,7 +42,6 @@ int main(int argc, char **argv) {
       {
         tab[u][y] = tab[u-1][y-1] +tab[u-1][y];  
       }
-      
   }
   afft(nb,tab);
 
