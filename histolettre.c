@@ -24,7 +24,7 @@ main ()
   ssize_t read;
   char * pt = NULL;
 
-  while ((read = getline(&line, &n,stdin)) != -1)
+  if((read = getline(&line, &n,stdin)) != -1)
           {
             copy = strdup(line);
 
