@@ -6,7 +6,6 @@
 /* calcul de la suite de fibonacci, ultra classique */
 int main (int argc, char** argv)
 {
-
     char* nbl;
     int nb;
 

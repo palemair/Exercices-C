@@ -1,64 +1,85 @@
-#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#define COMP 1
-#define PREM 0
+#include "xtools.h"
 
-
-void afft(int nbt, int tab[]);
-
-void afft(int nbt, int tab[])
+typedef struct Fraction
 {
-  int counter = 0;
-  for(int u = 0; u<nbt; u++)
-  {
-           if(tab[u] == PREM) 
-           {
-           printf(" %9d |",u);
-           counter++;
-           if(counter %10 == 0 && counter != 0) putchar('\n');
-           }
+    int denom;
+    int num;
 
+} fraction;
+
+/* PGCD recursive */
+int pgcdr(int u, int v)
+{
+  if(u<v) 
+  {
+      int temp = u;
+      u = v;
+      v = temp;
   }
-  putchar('\n');
+  int r = u%v;
+
+  if(r==0) return v;
+  else return (pgcdr(v,r));
 }
 
-int main(int argc, char **argv) {
-  
-    char *nbl; 
-    int nb;
-
-    if (argc ==2) 
-    {
-        nbl = strdupa(argv[1]);
-        sscanf(nbl,"%d",&nb);
-    }
-    else
-    {
-        nb = 100;
-    }
-
-  int tab[nb];
-  memset(tab,PREM,sizeof(tab));
-  
-  
-  /* afft(nb,tab); */
-  
-  tab[0] = COMP;
-  tab[1] = COMP;
-  
-  int x = 0;
-
-  for(x = 0; ( x*x < nb);x++ )
+/* PGCD % */
+int pgcd1(int u, int v)
+{
+  if(u<v) 
   {
-      while(tab[x] ==  COMP) x++;
-      for(int u = 2; u*x < nb ; u++)
-      {
-        tab[u * x] = COMP;  
-      }
+      int temp = u;
+      u = v;
+      v = temp;
   }
- 
-afft(nb,tab);
+  int r = 1;
+  
+  while(r>0)
+  {
+      r=u%v;
+      u=v;
+      v=r;
+  }
+  return u;
+}
+
+fraction* reduce(fraction *fr)
+{
+    int pg = pgcdr(fr->denom,fr->num);
+    fr->denom /= pg;
+    fr->num /= pg;
+    printf("%d/%d \n",fr->denom,fr->num); 
+    return fr;
+}
+
+/* PGCD SEDGEWICK */
+int pgcd2(int u, int v)
+{
+  int t;
+  while(u>0)
+  {
+    if (u<v)
+    {
+        t = u;
+        u = v;
+        v = t;
+    }
+  u = u - v;
+  }
+  return v;
+}
+
+int main(void) {
+  
+    int x,y;
+    x = 461952;
+    y = 116298;
+
+    START;
+    printf("%d\n",pgcdr(x,y));
+    STOP;
+    TPS("pgcd");
+
   return 0;
 }
