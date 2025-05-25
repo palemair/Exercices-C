@@ -7,7 +7,7 @@ int reverse(const char *str)
 {
     if(*str == '\0')
     {
-        return 0;
+        return EOF;
     }
     else
     {
@@ -25,14 +25,13 @@ int main (void)
       perror ("setlocale");
       return EXIT_FAILURE; 
     }
-  char phrase[MAX]="\0";
+  char phrase[MAX]={'\0'};
 
   puts("Entrez une phrase et je l'afficherais inversée avec une fonction recursive");
 
   fgets(phrase,MAX-1,stdin);
-  char *pt = phrase;
  
-  for(pt = phrase; *pt != '\0'; pt++)
+  for(char *pt = phrase; *pt != '\0'; pt++)
       if(*pt == '\n') *pt = '\0';
   
   reverse(phrase);

@@ -68,7 +68,6 @@ int main ()
     for (int f = max; f > 0; f--)
     {
         printf ("%2d |", f);
-
         for (int u = 0; u < 26; u++)
         {
             tab[u] < f ? printf ("   ") : printf (" X ");
