@@ -2,7 +2,6 @@
 
 int main (void)
 {
-
     puts ("Exercice 2 : modulo valeur négative");
     int x, y;
 
