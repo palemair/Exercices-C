@@ -1,12 +1,11 @@
 #include <stdio.h>
+#include <string.h>
 #define MAX 50
 
-int convertir (void)
+/* 4. Ecrivez une fonction **int convertir ()** qui lit un nombre décimal chiffre après chiffre, s'arrête à la rencontre d'un espace */
+
+int convertir (char *str)
 {
-    char str[MAX + 1];
-
-    fgets (str, MAX, stdin);
-
     char c;
     int i = 0;
     int n = 0;
@@ -21,11 +20,24 @@ int convertir (void)
     return n;
 }
 
-int main (void)
+int main (int argc, char **argv)
 {
-    printf ("%s", "Entrez un nombre : ");
-    int ret = convertir ();
+    char str[MAX + 1];
+
+    if(argc == 2)
+    {
+        if(strlen(argv[1]) < MAX)
+        {
+            strcpy(
+    }
+    else
+    {
+        printf ("%s", "Entrez un nombre : ");
+        fgets (str, MAX, stdin);
+    }
+    int ret = convertir (str);
 
     printf ("le nombre converti est : %d ou %#0X\n", ret, ret);
     return 0;
 }
+
