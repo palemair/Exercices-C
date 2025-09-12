@@ -1,22 +1,30 @@
-# "Algorithmes en langage C ", R.SEDGEWICK. ISBN 2 7296 0254 2.
+# _"Algorithmes en langage C "_, R.SEDGEWICK. 
 
-Chapitre 1 :
+ISBN 2 7296 0254 2.
 
-* Pas d'exercices.
+## BASES
 
-Chapitre 2 :
+- [x] Chapitre 1 : Pas d'exercices.
 
-1. Mettez en oeuvre la version classique de l'algorithme d'Euclide présentée dans le texte.
-2. Vérifiez quelles valeurs sont calculées par votre systeme C pour u % v lorsque u et v n sont pas toujours positifs.
-3. Implanter une procédure pour rendre irréductible une fraction utilisant la :
+- [x] Chapitre 2 : Langage C.
 
-                        struct fraction
-                             { int numerateur, denominateur ;}.
-4. Ecrivez une fonction **int convertir ()** qui lit un nombre décimal chiffre après chiffre, s'arrête à la rencontre d'un espace
-et retourne la valeur entière de ce nombre.
-5. Ecrivez la procédre **Binaire (int x)** qui affiche l'équivalent binaire de son praramêtre.
-6. Donnez toutes les valeurs que les variables u et v prennent lorsque l'appel **pgcd (12345, 56789)** est effectué.
-7. Combien d'instructions C sont exécutées pour l'appel de l'exercices précédent ?
-8. Ecrivez un programme calculant le PGCD de 3 entiers u,v et w.
-9. Trouvez le couple d'entiers premiers entre eux (pgcd == 1) les plus grands de votre système C.
-10. Implantez l'algorithme d'Euclide en FORTRAN ou BASIC.  
+- [x] Chapitre 3 : Structures de données élémentaires.
+
+- [ ] Chapitre 4 : Arbres.
+
+- [ ] Chapitre 5 : Récursion.
+
+- [ ] Chapitre 6 : Analyse de complexité.
+
+- [ ] Chapitre 7 : Implantation d'algorithmes.
+
+## TRIS
+
+- [ ] Chapitre 8 : Methodes de tri élémentaires.
+
+- [ ] Chapitre 9 : Le tri rapide (Quicksort).
+
+- [ ] Chapitre 10 : Tr basique.
+
+
+
