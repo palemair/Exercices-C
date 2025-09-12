@@ -1,6 +1,9 @@
 #include <stdio.h>
 
 /* PGCD SEDGEWICK */
+/* 1. Mettez en oeuvre la version classique de l'algorithme d'Euclide 
+ * présentée dans le texte.*/
+
 int pgcd (int u, int v)
 {
     int t;
@@ -32,3 +35,11 @@ int main (void)
 
     return 0;
 }
+
+ /* Resultats : 
+
+5 3 = pgcd 1
+-5 8 = pgcd 8
+39 65 = pgcd 13
+461952 116298 = pgcd 18
+*/

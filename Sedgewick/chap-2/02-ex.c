@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+/* 2. Vérifiez quelles valeurs sont calculées par votre systeme C 
+ * pour u % v lorsque u et v n sont pas toujours positifs. */
+
 int main (void)
 {
     int x, y;
@@ -11,3 +14,8 @@ int main (void)
 
     return 0;
 }
+
+ /* Resultats : 
+
+-60 %  11 =>  -5
+*/

@@ -1,15 +1,17 @@
 #!/bin/bash
-# compiler selon le numero de chapitre
+# Compile le fichier C et imprime le résultats en commentaire à la fin.
 
-if [ $1 -gt 1 ]
+if [ "$#" -ne 1 ]; 
     then
-        for file in *.c
-            do
-                f=${file/*\//}
-                f=${f/.c/}
-                gcc -Wall -Wextra -pedantic $file -o chap-$1/bin/$f 
-            done
-            echo 'compilation terminée !!'
+    echo "Le nombre d'arguments est invalide"
     else
-        echo 'Entrez un numero de chapitre !!'
-fi
+        if test "$1 == "*.c""
+        then
+            gcc -Wall -Wextra -pedantic $1
+            echo -e "\n /* Resultats : \n" >> $1
+            ./a.out >> $1 
+            echo -e "*/" >> $1
+        else
+            echo "Not a C program !!"
+        fi
+    fi

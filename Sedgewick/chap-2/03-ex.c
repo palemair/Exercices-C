@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* 3. Implanter une procédure pour rendre irréductible une fraction utilisant la : */
+
+/*                         struct fraction */
+/*                              { int numerateur, denominateur ;}. */
+
 typedef struct Fraction
 {
     int denom;
@@ -44,8 +49,6 @@ fraction* reduce (fraction* fr)
 
 int main (void)
 {
-
-    puts ("Exercice 3 : reduire une fraction");
     int x, y;
 
     x = 3;
@@ -58,3 +61,8 @@ int main (void)
 
     return 0;
 }
+
+ /* Resultats : 
+
+3/15 => 1/5 
+*/
