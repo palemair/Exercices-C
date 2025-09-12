@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <c-xtools.h>
+
+/* 7. Combien d'instructions C sont exécutées pour l'appel de l'exercices précédent ? */
 
 /* PGCD SEDGEWICK */
 int pgcd (int u, int v)
@@ -51,10 +52,14 @@ int pgcd1 (int u, int v)
 int main (void)
 {
 
-    START;
     printf ("pgcd : %d\n\n", pgcd (12345,56789));
-    STOP;
-    TPS ("pgcd euclide");
 
     return 0;
 }
+
+ /* Resultats : 
+
+count 552 -> u : 0 v : 1
+pgcd : 1
+
+*/

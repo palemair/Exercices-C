@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+/* 8. Ecrivez un programme calculant le PGCD de 3 entiers u,v et w. */
+
 /* PGCD % */
 int pgcd1 (int u, int v)
 {
@@ -38,3 +40,9 @@ int main (void)
 
     return 0;
 }
+
+ /* Resultats : 
+
+pgcd des nombres : 12345 6789 180
+pgcd3 : 3
+*/

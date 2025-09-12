@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <limits.h>
 
+/* 9. Trouvez le couple d'entiers premiers entre eux (pgcd == 1)
+ * les plus grands de votre système C. */
+
 /* PGCD % */
 unsigned long long pgcd (unsigned long long u, unsigned long long v)
 {
@@ -34,3 +37,9 @@ int main (void)
 
     return 0;
 }
+
+ /* Resultats : 
+
+pgcd : 1 
+ x: 9223372036854775807 y: 9223372036854775805 
+*/

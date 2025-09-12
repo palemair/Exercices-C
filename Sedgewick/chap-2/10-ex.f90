@@ -5,8 +5,9 @@ program pgcd
  integer :: v
  integer :: t
 
-  print *, 'Please enter two numbers.'
-  read (5,*) u 
+  v = 23
+  
+  u = 12
 
   if (u<v) then
       t=u

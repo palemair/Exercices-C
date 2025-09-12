@@ -2,7 +2,8 @@
 #include <string.h>
 #define MAX 50
 
-/* 4. Ecrivez une fonction **int convertir ()** qui lit un nombre décimal chiffre après chiffre, s'arrête à la rencontre d'un espace */
+/* 4. Ecrivez une fonction **int convertir ()** qui lit un nombre décimal 
+ *    chiffre après chiffre, s'arrête à la rencontre d'un espace */
 
 int convertir (char *str)
 {
@@ -28,7 +29,8 @@ int main (int argc, char **argv)
     {
         if(strlen(argv[1]) < MAX)
         {
-            strcpy(
+            strcpy(str,argv[1]);
+        }
     }
     else
     {
@@ -40,4 +42,9 @@ int main (int argc, char **argv)
     printf ("le nombre converti est : %d ou %#0X\n", ret, ret);
     return 0;
 }
+
+ /* Resultats : 
+
+le nombre converti est : 3154 ou 0XC52
+*/
 

@@ -54,7 +54,7 @@ int main (void)
     x = 3;
     y = 15;
 
-    printf ("%d/%d => ", x, y);
+    printf ("\t%d/%d => ", x, y);
     fraction fr = { x, y };
 
     reduce (&fr);
@@ -62,7 +62,8 @@ int main (void)
     return 0;
 }
 
+
  /* Resultats : 
 
-3/15 => 1/5 
+	3/15 => 1/5 
 */
