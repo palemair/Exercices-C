@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* 2. Implantez une procédure DeplacerSuivantDebut ( **struct*** noeud \*t) sur une liste chainée */
+
+/*    qui déplace en tête de liste le noeud suivant le noeud sur lequel pointe t. */ 
+
 struct Node
 {
     int data;
@@ -65,3 +69,9 @@ int main(void)
 
     print_list();
 }
+
+ /* Resultats : 
+
+  A >  B >  C >  D >  E >  F >  G >  H >  I >  J >  K >  L >  M >  N >  O >EOL
+  E >  A >  B >  C >  D >  F >  G >  H >  I >  J >  K >  L >  M >  N >  O >EOL
+*/
