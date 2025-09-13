@@ -5,9 +5,7 @@ program pgcd
  integer :: v
  integer :: t
 
-  v = 23
-  
-  u = 12
+ READ(*,*) u,v
 
   if (u<v) then
       t=u
