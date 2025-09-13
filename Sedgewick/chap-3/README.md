@@ -1,6 +1,7 @@
 # Chapitre 3 :
 
-1. 
+1. Ecrivez un programme pour remplir un tableau à 2 dimensions de booléens en mettant 1 dans t[i][j] si 
+   si pgcd(i,j) est 1, 0 sinon.
 2. 
 3.
 4. 
