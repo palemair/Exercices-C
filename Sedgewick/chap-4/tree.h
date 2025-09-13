@@ -28,4 +28,4 @@ int hauteur(struct Node *pt);
 void infixe_it(node pt);
 void infixe_2(node pt);
 void parcours(node tree, int t[][NB], size_t l, size_t r);
-void printbst(node root);
+void printtree(node root);

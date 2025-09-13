@@ -235,7 +235,7 @@ void parcours(node tree,int t[][NB],size_t l,size_t r)
     y-=2;
 }
 
-void printbst(node root)
+void printtree(node root)
 {
   int h = hauteur(root) * 2  + 1;
   int tab[h][NB];

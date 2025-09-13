@@ -3,6 +3,9 @@
 #include <stdbool.h>
 #include "util.h"
 
+/* 1. Donnez la succession des noeuds lors des parcours préfixé,
+ *    infixé, postfixé et par niveau de l'arbre fig 4.3. */
+
 int main ()
 {
   struct Node* B = nd('B',nd('R',nd('A',NULL,NULL),nd(' ',NULL,NULL)),nd('E',nd('R',NULL,NULL),nd('C',NULL,NULL)));
@@ -10,7 +13,7 @@ int main ()
   struct Node* arbre = nd(' ',B,R);
 
   printf("%20s","Arbre de la figure 4.3 :\n");
-  printbst(arbre);
+  printtree(arbre);
   printf("\n\n");
 
   printf("%20s","Preorder :");
