@@ -6,6 +6,7 @@
 
                         struct fraction
                              { int numerateur, denominateur ;}.
+
 4. Ecrivez une fonction **int convertir ()** qui lit un nombre décimal chiffre après chiffre, s'arrête à la rencontre d'un espace
 et retourne la valeur entière de ce nombre.
 5. Ecrivez la procédre **Binaire (int x)** qui affiche l'équivalent binaire de son praramêtre.

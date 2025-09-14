@@ -1,8 +1,5 @@
 # Exercices-C
 
-Le dossier Sedgewick contient les exercices du livre :
+* Corrigés des exercices de "Algorithmes en langage C "_, R.SEDGEWICK. ISBN 2 7296 0254 2.
 
-_"Algorithmes en langage C "_ , R.SEDGEWICK.
-ISBN 2 7296 0254 2.
-
-Le dossier divers contient quelques exercices classiques.
+* Le dossier divers contient quelques exercices classiques.
