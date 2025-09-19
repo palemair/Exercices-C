@@ -76,9 +76,9 @@ int main() {
 
   memset(tb,46,sizeof tb);
   x1 = 5;
-  y1 = 12;
-  x2 = 15;
-  y2 = 20;
+  y1 = 15;
+  x2 = 20;
+  y2 = 25;
   
   point(x1,y1,'S');
   point(x2,y2,'E');
