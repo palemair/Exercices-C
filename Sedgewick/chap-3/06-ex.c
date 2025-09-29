@@ -3,6 +3,9 @@
 
 #define max 10
 
+/* 6. Ecrivez les primitives relatives à une représentation de pile par liste chaînées mais utilisant des */
+/*    tableaux parallèles. */
+
 static int cle[max + 1], suivant[max + 1];
 
 static int debut,sp;
@@ -58,3 +61,10 @@ int main(void)
 
     return 0;
 }
+
+ /* Resultats : 
+
+EOL
+ 7 >  8 >  9 > EOL
+ 7 > EOL
+*/

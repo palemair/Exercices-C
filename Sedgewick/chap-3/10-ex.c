@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* 10. Implantez les primitives d'une file à partir d'une représentation par liste chaînée. */
+
 struct Node
 {
     char value;
@@ -93,3 +95,13 @@ int main(void)
     print_file(tete);
     putchar('\n');
 }
+
+ /* Resultats : 
+
+Queue -> J -> I -> H -> G -> F -> E -> D -> C -> B -> A 
+defiler A <- 
+enfiler -> M 
+enfiler -> P 
+defiler B <- C <- D <- 
+Queue -> P -> M -> J -> I -> H -> G -> F -> E 
+*/

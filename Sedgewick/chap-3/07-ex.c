@@ -1,5 +1,9 @@
 #include "stdio.h"
 
+/* 7. Donnez le contenu de la pile pour chaque opération de la suite */ 
+/*    *Q\*UES\*\*\*TI\*ON\*FAC\*\*\*IL\*E\*\**. chaque lettre est un empilement, et chaque astérisque */
+/*    provoque un dépilement. */
+
 #define MAX 100
 static char tp[MAX + 1];
 static int sp = 0;
@@ -54,3 +58,94 @@ int main(void)
 
     return 0;
 }
+
+ /* Resultats : 
+
+Q*UES***TI*ON*FAC***IL***E**
+ Q
+  --  
+  --  
+ U
+  --  
+ E
+ U
+  --  
+ S
+ E
+ U
+  --  
+ E
+ U
+  --  
+ U
+  --  
+  --  
+ T
+  --  
+ I
+ T
+  --  
+ T
+  --  
+ O
+ T
+  --  
+ N
+ O
+ T
+  --  
+ O
+ T
+  --  
+ F
+ O
+ T
+  --  
+ A
+ F
+ O
+ T
+  --  
+ C
+ A
+ F
+ O
+ T
+  --  
+ A
+ F
+ O
+ T
+  --  
+ F
+ O
+ T
+  --  
+ O
+ T
+  --  
+ I
+ O
+ T
+  --  
+ L
+ I
+ O
+ T
+  --  
+ I
+ O
+ T
+  --  
+ O
+ T
+  --  
+ T
+  --  
+ E
+ T
+  --  
+ T
+  --  
+  --  
+*/

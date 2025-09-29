@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* 3. Implantez une procédure **Echanger ( struct noeud  \*t,** struct noeud \*u)*** sur une liste chainée */
+/*    qui échange les positions des noeuds suivant ceux sur lesquels pointent t et u. */
+
 struct Node
 {
     int data;
@@ -82,3 +85,10 @@ int main(void)
 
     print_list();
 }
+
+ /* Resultats : 
+
+  A ->   B ->   C ->   D ->   E ->   F ->   G ->   H ->   I ->   J ->   K ->   L ->   M ->   N ->   O -> EOL
+echange H et D
+  A ->   B ->   C ->   H ->   E ->   F ->   G ->   D ->   I ->   J ->   K ->   L ->   M ->   N ->   O -> EOL
+*/

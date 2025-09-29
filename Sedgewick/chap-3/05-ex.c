@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+/* 5. Ecrivez les primitives d'insertion et de suppression dans une liste doublement chaînée. */
+
 struct Node
 {
     int data;
@@ -81,3 +83,10 @@ int main(void)
 
     return 0;
 }
+
+ /* Resultats : 
+
+ A >  B >  C >  D >  E >  F >  G >  H >  I >  J >  K >  L >  M > EOL
+ A >  B >  C >  D >  B >  E >  F >  G >  H >  I >  J >  K >  L >  M > EOL
+ A >  B >  C >  D >  B >  E >  F >  G >  I >  J >  K >  L >  M > EOL
+*/
