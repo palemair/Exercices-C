@@ -242,20 +242,14 @@ void printtree(node root)
   
   for(int u = 0; u <h ;u++)
   {
-      for (int i=0;i<NB;i++)
-      {
-          tab[u][i] = ' ';
-      }
+      for (int i=0;i<NB;i++) tab[u][i] = ' ';
   }
 
   parcours(root,tab,2,NB-2);
   
   for(int u = 0; u <h;u++)
   {
-      for (int i=0;i<NB;i++)
-      {
-          printf("%c",tab[u][i]);
-      }
+      for (int i=0;i<NB;i++) printf("%c",tab[u][i]);
       printf("\n");
   }
 }
