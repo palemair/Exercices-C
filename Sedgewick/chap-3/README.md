@@ -24,7 +24,7 @@
    *Q\*UES\*\*\*TI\*ON\*FAC\*\*\*IL\*E\*\**. chaque lettre est un enfilement, et chaque astérisque
    provoque un défilement.
 
-9. Donnez une suite d'appels à **SupprimerSuivant** et **InsererSuivant** qui purrait
+9. Donnez une suite d'appels à **SupprimerSuivant** et **InsererSuivant** qui pourrait
    donner le résultat de la figure 3.5 à partir d'une liste vide.
 
 10. Implantez les primitives d'une file à partir d'une représentation par liste chaînée.
