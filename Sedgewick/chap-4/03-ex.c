@@ -8,15 +8,45 @@
 
 int main ()
 {
-  struct Node *x,*y,*z, *root;
+  char tab[] = "( ( A + B ) *  C ) + (D + E )";
+  node x, y;
+  char *pt = tab;
   
-  x = nd('+',nd('A',NULL,NULL),nd('B',NULL,NULL));
-  y = nd('+',nd('D',NULL,NULL),nd('C',NULL,NULL));
-  z = nd('*',x,nd('C',NULL,NULL));
- 
-  root = nd('+',z,y); 
+  while(*pt != '\0')
+  {
+      if((*pt >= 'A') && (*pt <= 'Z'))
+      {
+          empiler(nd(*pt,NULL,NULL));
+      }
+      
+      if(*pt == '+') 
+      {
+          x = nd(*pt,NULL,NULL);
+          x->L = depiler();
+          empiler(x);
+      }
 
-  printtree(root);
+      if(*pt == '*') 
+      {
+          x = nd(*pt,NULL,NULL);
+          x->L = depiler();
+          empiler(x);
+      }
+      if(*pt == ')') 
+      {
+          x = depiler();
+          y = depiler();
+          y->R = x;
+          empiler(y);
+      }
+      pt++; 
+  }
+  
+  x = depiler();
+  y = depiler();
+  y->R = x;
+
+  printtree(y);
   printf("\n\n");
 
   return (EXIT_SUCCESS);
@@ -29,7 +59,7 @@ int main ()
                                +----------------------------+----------------------------+                              
                               (*)                                                       (+)                             
                 +--------------+-------------+                            +--------------+-------------+                
-               (+)                          (C)                          (D)                          (C)               
+               (+)                          (C)                          (D)                          (E)               
          +------+------+                                                                                                
         (A)           (B)                                                                                               
                                                                                                                         
