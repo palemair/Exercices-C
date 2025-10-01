@@ -2,6 +2,8 @@
 
 ISBN 2 7296 0254 2.
 
+Proposition de corrigés des exercices.
+
 ## BASES
 
 - [x] Chapitre 1 : Pas d'exercices.
