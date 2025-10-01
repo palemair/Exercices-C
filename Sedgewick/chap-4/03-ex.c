@@ -8,15 +8,28 @@
 
 int main ()
 {
-  char tab[] = "( ( A + B ) *  C ) + (D + E )";
+  char tab[] = "(A+B)*C+(D+E)";
   node x, y;
   char *pt = tab;
+  bool mul = false;
   
   while(*pt != '\0')
   {
       if((*pt >= 'A') && (*pt <= 'Z'))
       {
-          empiler(nd(*pt,NULL,NULL));
+          x = nd(*pt,NULL,NULL);
+          
+          if(mul)
+          {
+              y = depiler();
+              y->R = x;
+              empiler(y);
+              mul = false;
+          }
+          else
+          {
+              empiler(x);
+          }
       }
       
       if(*pt == '+') 
@@ -31,6 +44,7 @@ int main ()
           x = nd(*pt,NULL,NULL);
           x->L = depiler();
           empiler(x);
+          mul = true;
       }
       if(*pt == ')') 
       {
@@ -47,7 +61,7 @@ int main ()
   y->R = x;
 
   printtree(y);
-  printf("\n\n");
+  printf("\n");
 
   return (EXIT_SUCCESS);
 }
@@ -63,6 +77,5 @@ int main ()
          +------+------+                                                                                                
         (A)           (B)                                                                                               
                                                                                                                         
-
 
 */
