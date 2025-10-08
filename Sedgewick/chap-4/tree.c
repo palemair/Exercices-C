@@ -161,7 +161,7 @@ int hauteur(struct Node * pt)
 {
     if (pt == NULL)
     {
-        return 0;
+        return -1;
     }
     return (1 + rmax(hauteur(pt->L) , hauteur(pt->R)));
 }
@@ -237,7 +237,7 @@ void parcours(node tree,int t[][NB],size_t l,size_t r)
 
 void printtree(node root)
 {
-  int h = hauteur(root) * 2  + 1;
+  int h = hauteur(root) * 2  + 2;
   int tab[h][NB];
   
   for(int u = 0; u <h ;u++)

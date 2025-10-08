@@ -11,4 +11,7 @@ node consult(void);
 void empiler(node v);
 node depiler(void);
 void enfiler(node v);
+void print_pile(void);
 node defiler(void);
+void print_file(void);
+

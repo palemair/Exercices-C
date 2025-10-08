@@ -28,6 +28,14 @@ void empiler(node v)
    }
 }
 
+void print_pile(void)
+{
+    printf(" Pile : ");
+    for(int u=0;u<=sp;u++) printf("%c -",pile[u]->data);
+    printf("\n");
+
+}
+
 node consult(void)
 {
     return pile[sp];
@@ -58,4 +66,12 @@ node defiler(void)
 
     if(debut > MAX) debut = 0;
     return t;
+}
+
+void print_file(void)
+{
+    printf(" File : ");
+    for(int u=fin-1;u>=debut;u--) printf("%c -",file[u]->data);
+    printf("\n");
+
 }

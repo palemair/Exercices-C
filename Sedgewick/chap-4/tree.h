@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define NB 120
+#define NB 100
 
 typedef struct Node
 {
