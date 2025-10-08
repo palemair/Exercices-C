@@ -21,7 +21,7 @@
 8. Donnez un exemple d'arbre pour lquel la pile utilise moins de place pendant un parcours préfixé que la
     file pendant un parcours par niveau.
 
-9. Donnez une mplantation à base de pile du parcours postfixé d'un arbre binaire.
+9. Donnez une implantation à base de pile du parcours postfixé d'un arbre binaire.
 
 10. Ecrivez un programme pour implanter le parcours par niveau d'un arbre général représenté
     comme un arbre binaire.   
