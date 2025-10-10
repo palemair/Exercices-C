@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include "util.h"
 
-/* 7. Donnez un exemple d'arbre pour lquel la pile utilise plus de place pendant un parcours préfixé que la */
+/* 7. Donnez un exemple d'arbre pour lequel la pile utilise plus de place pendant un parcours préfixé que la */
 /*     file pendant un parcours par niveau. */
 
 void visit(node nd)
@@ -13,33 +13,11 @@ void visit(node nd)
 
 int main ()
 {
-  /* struct Node* m = nd('M',NULL,nd('N',nd('I',NULL,NULL),NULL)); */
-
-  /* struct Node* t = nd('T',nd('E',nd('O',m,NULL),NULL),NULL); */
-
-  /* /1* struct Node* r = nd('R',nd('A',NULL,nd('B',NULL,NULL)),NULL); *1/ */
-
-  /* struct Node* l = nd('R',r,t); */
-  
-  /* struct Node* e = nd('E',l,NULL); */
-
-
-
-  /* struct Node* T = nd('T',NULL,nd('E',NULL,nd('O',nd('M',NULL,NULL),nd('N',nd('I',NULL,NULL),NULL)))); */
-  /* struct Node* R = nd('R',nd('R',nd('A',NULL,NULL),nd('B',NULL,NULL)),NULL); */
-  /* struct Node* arbre = nd('E',R,T); */
-
   struct Node* r = nd('R',NULL,nd('E',NULL,nd('T',NULL,nd('E',NULL,NULL))));
-
-  struct Node* o = nd('O',nd('M',r,NULL),nd('N',NULL,NULL));
-
-  struct Node* b = nd('B',nd('A',NULL,nd('R',NULL,NULL)),o);
-  
-  struct Node* i = nd('I',b,NULL);
-
+  struct Node* o = nd('O',r,nd('N',NULL,NULL));
   struct Node* pt ;
 
-  enfiler(i);
+  enfiler(o);
 
   printf("   |");
   while(!file_vide())
@@ -53,7 +31,7 @@ int main ()
 
   printf("\n\n");
 
-  empiler(i);
+  empiler(o);
 
   printf("   |");
   while(!pile_vide())
@@ -70,29 +48,18 @@ int main ()
   return (EXIT_SUCCESS);
 }
 
-
  /* Resultats : 
 
-   | File : I -
- I | File : B -
- B | File : O -A -
- A | File : R -O -
- O | File : N -M -R -
- R | File : N -M -
- M | File : R -N -
- N | File : R -
- R | File : E -
+   | File : O -
+ O | File : N -R -
+ R | File : E -N -
+ N | File : E -
  E | File : T -
  T | File : E -
  E |
 
-   | Pile : I -
- I | Pile : B -
- B | Pile : O -A -
- A | Pile : O -R -
- R | Pile : O -
- O | Pile : N -M -
- M | Pile : N -R -
+   | Pile : O -
+ O | Pile : N -R -
  R | Pile : N -E -
  E | Pile : N -T -
  T | Pile : N -E -

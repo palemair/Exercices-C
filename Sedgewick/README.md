@@ -12,7 +12,7 @@ Proposition de corrigés des exercices.
 
 - [x] Chapitre 3 : Structures de données élémentaires.
 
-- [ ] Chapitre 4 : Arbres.
+- [x] Chapitre 4 : Arbres.
 
 - [ ] Chapitre 5 : Récursion.
 

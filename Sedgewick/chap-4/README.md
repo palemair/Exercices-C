@@ -4,7 +4,7 @@
 
 2. Quelle est la hauteur d'un arbre quaternaire à N noeuds ? 
 
-3. Dessinez l'arbre syntaxique de l'expression (A+B)\*C+(D+E).
+3. Dessinez l'arbre syntaxique de l'expression `(A+B)*C+(D+E)`
 
 4. En considérant l'arbre de la figure 4.2 comme un arbre généralisé à représenter comme un arbre binaire,
     dessinez cette représentation. 
@@ -15,10 +15,10 @@
 6. Donnez le contenu de la file chaque fois qu'un noeud est visiter pendant le parcours
     par niveau de la figure 4.12. 
 
-7. Donnez un exemple d'arbre pour lquel la pile utilise plus de place pendant un parcours préfixé que la
+7. Donnez un exemple d'arbre pour lequel la pile utilise plus de place pendant un parcours préfixé que la
     file pendant un parcours par niveau.
 
-8. Donnez un exemple d'arbre pour lquel la pile utilise moins de place pendant un parcours préfixé que la
+8. Donnez un exemple d'arbre pour lequel la pile utilise moins de place pendant un parcours préfixé que la
     file pendant un parcours par niveau.
 
 9. Donnez une implantation à base de pile du parcours postfixé d'un arbre binaire.
